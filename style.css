@@ -567,6 +567,7 @@ body.font-ar .submit-button {
   .icon-row {
     flex-direction: column; /* Stack items vertically on small screens */
     align-items: center; /* Center the icons in a column */
+    /* gap:30px; */
   }
 
   .icon-item {
@@ -959,7 +960,6 @@ body.font-ar .submit-button {
   .social-media-text p.description2 {
     font-size: 1rem;
     max-width: 500px;
-
   }
   .social-media-icons .icon-link {
     width: 40px;
@@ -1373,7 +1373,6 @@ form#professionalForm {
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-align: center;
-
 }
 .vertical-dividering {
   width: 200px;
@@ -1381,7 +1380,6 @@ form#professionalForm {
   background-color: #ccc;
   margin: 50px auto;
   text-align: center;
-
 }
 .social-media-text p.services-description2 {
   font-size: 20px;
@@ -1392,6 +1390,9 @@ form#professionalForm {
 }
 /* Responsive design */
 @media (max-width: 960px) {
+  #services-page.icon-row {
+    gap: 20px;
+  }
   .services-overlay-container {
     margin: 0;
     padding: 0;
