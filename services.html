@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dceeny</title>
+
+    <!-- External Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Translation Script -->
+    <script src="scripts/translations.js"></script>
+    <link rel="icon" href="assets/images/favicon.png" />
+  </head>
+  <script>
+    $(document).ready(function () {
+      $("#header-container").load("elements/header.html", function () {
+        const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
+        applyTranslations(savedLanguage); // Call translation function after loading
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#footer").load("elements/footer.html", function () {
+        applyTranslations(localStorage.getItem("preferredLanguage") || "en");
+      });
+    });
+  </script>
+  <body>
+    <header id="header-container"></header>
+    <div id="services-page" class="icon-row">
+      <div class="icon-item">
+        <img
+          src="https://static.tildacdn.pro/lib/tildaicon/62663366-3135-4433-b431-633766666563/Tilda_Icons_33_interior_office.svg"
+          alt="Icon 1"
+          class="icon-image-services"
+        />
+        <p class="icon-title-services" data-translate="interiorDesign">
+          Title 1
+        </p>
+      </div>
+      <div class="icon-item">
+        <img
+          src="https://static.tildacdn.pro/lib/tildaicon/32653631-3438-4630-a664-343839353236/Tilda_Icons_33_interior_hosteye.svg"
+          alt="Icon 2"
+          class="icon-image-services"
+        />
+        <p class="icon-title-services" data-translate="designerSup">Title 2</p>
+      </div>
+      <div class="icon-item">
+        <img
+          src="https://static.tildacdn.pro/lib/tildaicon/39386162-3363-4261-a661-313237383638/Layer_6.svg"
+          alt="Icon 3"
+          class="icon-image-services"
+        />
+        <p class="icon-title-services" data-translate="costEstimating">
+          Title 3
+        </p>
+      </div>
+      <div class="icon-item">
+        <img
+          src="assets/svg/vr-goggles.png"
+          alt="Icon 4"
+          class="icon-image-services"
+        />
+        <p class="icon-title-services" data-translate="vR">Title 4</p>
+      </div>
+    </div>
+    <div class="services-overlay-container">
+      <div class="background-image-overlay">
+        <img
+          src="assets/images/projects/private/1/cam 8.jpg"
+          alt="Background Image"
+          class="background-image"
+        />
+        <div class="overlay"></div>
+      </div>
+      <div class="social-media-text">
+        <h1 class="services-main-title" data-translate="projectDesign"></h1>
+        <div class="vertical-dividering"></div>
+        <p
+          class="services-description2"
+          data-translate="projectDesignDescription"
+        ></p>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

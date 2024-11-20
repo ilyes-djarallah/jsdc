@@ -1,0 +1,101 @@
+<script>
+  // Function to toggle the visibility of project links on small screens
+  function toggleDropdown() {
+    var dropdown = document.getElementById("projects-dropdown");
+
+    // Toggle the dropdown visibility by adding/removing a class
+    if (dropdown.classList.contains("show-dropdown")) {
+      dropdown.classList.remove("show-dropdown"); // Hide if currently visible
+    } else {
+      dropdown.classList.add("show-dropdown"); // Show if currently hidden
+    }
+  }
+
+  // Add event listener to the "Projects" button
+  document
+    .getElementById("projects-btn")
+    .addEventListener("click", toggleDropdown);
+</script>
+<script src="scripts/translations.js"></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="assets/images/favicon.png" />
+<header>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html">
+        <img src="assets/images/DCEENY.png" alt="Logo" id="logo" />
+      </a>
+    </div>
+    <div class="navbar-links">
+      <!-- Projects Dropdown -->
+      <div class="nav-item-container" id="projects-nav-item">
+        <button class="nav-link" id="projects-btn" data-translate="projects">
+          Projects
+        </button>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu" id="projects-dropdown">
+            <button
+              class="dropdown-link"
+              onclick="location.href='private-projects.html'"
+            >
+              <span data-translate="privateProjects"></span>
+            </button>
+            <button
+              class="dropdown-link"
+              onclick="location.href='public-projects.html'"
+            >
+              <span data-translate="publicProjects"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Navigation Links -->
+      <button
+        class="nav-link"
+        data-translate="aboutUs"
+        onclick="location.href='about-us.html'"
+      ></button>
+      <button
+        class="nav-link"
+        data-translate="services"
+        onclick="location.href='services.html'"
+      ></button>
+      <button
+        class="nav-link"
+        data-translate="contacts"
+        onclick="location.href='contacts.html'"
+      ></button>
+
+      <!-- Language Selection Dropdown -->
+      <div class="nav-item-container" id="language-container">
+        <button class="nav-link" id="lge-btn">
+          <span data-translate="langauge"></span>
+        </button>
+        <div class="dropdown-lge-menu">
+          <button
+            class="dropdown-link"
+            data-lang="en"
+            onclick="switchLanguage('en')"
+          >
+            EN
+          </button>
+          <button
+            class="dropdown-link"
+            data-lang="fr"
+            onclick="switchLanguage('fr')"
+          >
+            FR
+          </button>
+          <button
+            class="dropdown-link"
+            data-lang="ar"
+            onclick="switchLanguage('ar')"
+          >
+            AR
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

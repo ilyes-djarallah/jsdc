@@ -1,0 +1,80 @@
+    <!-- Navigation Bar -->
+    <!-- <header>
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <a href="index.html">
+            <img src="assets/images/DCEENY.png" alt="Logo" id="logo" />
+          </a>
+        </div> -->
+
+        <!-- Navigation Links -->
+        <!-- <div class="navbar-links">
+          <div class="nav-item-container" id="projects-container">
+            <button class="nav-link" id="projects-btn">PROJECTS</button> -->
+
+            <!-- Dropdown Menu -->
+            <!-- <div class="dropdown-menu" id="projects-dropdown">
+              <button class="dropdown-link"onclick="location.href='pages/private-projects.html'">Private Projects</button>
+              <button class="dropdown-link"onclick="location.href='pages/public-projects.html'">Public Projects</button>
+            </div>
+          </div>
+
+          <button
+            class="nav-link"
+            id="about-us-btn"
+            onclick="location.href='pages/about-us.html'"
+          >
+            ABOUT US
+          </button>
+          <button
+            class="nav-link"
+            id="services-btn"
+            onclick="location.href='pages/services.html'"
+          >
+            SERVICES
+          </button>
+          <button
+            class="nav-link"
+            id="contacts"
+            onclick="location.href='pages/contacts.html'"
+          >
+            CONTACTS
+          </button>
+          <button class="nav-link" id="lge-btn">FR</button>
+        </div>
+      </nav>
+    </header> -->
+    <!-- The End of Navigation Bar -->
+
+
+
+// // Language Switcher Function
+// async function changeLanguage(lang) {
+//   const translations = await fetchTranslations();
+
+//   const langBtn = document.getElementById("lang-btn");
+//   const projectsBtn = document.getElementById("projects-btn");
+//   const aboutUsLink = document.getElementById("about-us-link");
+//   const servicesLink = document.getElementById("services-link");
+//   const contactsLink = document.getElementById("contacts-link");
+
+//   if (lang === "en") {
+//     langBtn.textContent = "EN";
+//     projectsBtn.textContent = translations.en.projects;
+//     aboutUsLink.textContent = translations.en.about_us;
+//     servicesLink.textContent = translations.en.services;
+//     contactsLink.textContent = translations.en.contacts;
+//   } else if (lang === "fr") {
+//     langBtn.textContent = "FR";
+//     projectsBtn.textContent = translations.fr.projects;
+//     aboutUsLink.textContent = translations.fr.about_us;
+//     servicesLink.textContent = translations.fr.services;
+//     contactsLink.textContent = translations.fr.contacts;
+//   } else if (lang === "ar") {
+//     langBtn.textContent = "AR";
+//     projectsBtn.textContent = translations.ar.projects;
+//     aboutUsLink.textContent = translations.ar.about_us;
+//     servicesLink.textContent = translations.ar.services;
+//     contactsLink.textContent = translations.ar.contacts;
+//   }
+// }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dceeny</title>
+
+    <!-- External Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Translation Script -->
+    <script src="../scripts/translations.js"></script>
+  </head>
+
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-container"></div>
+
+    <!-- Load Header and Apply Translations -->
+    <script>
+      $(document).ready(function () {
+        $("#header-container").load("../elements/header.html", function () {
+          const savedLanguage =
+            localStorage.getItem("preferredLanguage") || "en";
+          applyTranslations(savedLanguage); // Call translation function after loading
+        });
+      });
+    </script>
+
+    <!-- Body Section -->
+    <main>
+      <h1 style="text-align: center">This is the PUBLIC PROJECTS body</h1>
+    </main>
+    <script>
+      $(function () {
+        $("#footer").load("../elements/footer.html", function () {
+          applyTranslations(localStorage.getItem("preferredLanguage") || "en");
+        });
+      });
+    </script>
+    <div id="footer"></div>
+    <!-- Additional JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

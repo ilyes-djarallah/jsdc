@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dceeny</title>
+
+    <!-- External Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Translation Script -->
+    <script src="scripts/translations.js"></script>
+    <link rel="icon" href="assets/images/favicon.png" />
+  </head>
+  <script>
+    $(document).ready(function () {
+      $("#header-container").load("elements/header.html", function () {
+        const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
+        applyTranslations(savedLanguage); // Call translation function after loading
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#footer").load("elements/footer.html", function () {
+        applyTranslations(localStorage.getItem("preferredLanguage") || "en");
+      });
+    });
+  </script>
+  <body>
+    <header id="header-container"></header>
+    <div class="page-title">This is CONTACTS body</div>
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dceeny</title>
+
+    <!-- External Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Translation Script -->
+    <script src="scripts/translations.js"></script>
+    <link rel="icon" href="assets/images/favicon.png" />
+  </head>
+  <script>
+    $(document).ready(function () {
+      $("#header-container").load("elements/header.html", function () {
+        const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
+        applyTranslations(savedLanguage); // Call translation function after loading
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#footer").load("elements/footer.html", function () {
+        applyTranslations(localStorage.getItem("preferredLanguage") || "en");
+      });
+    });
+  </script>
+  <body>
+    <header id="header-container"></header>
+    <div class="social-media-container">
+      <!-- Background image with overlay -->
+      <div class="background-image-overlay">
+        <img
+          src="assets/images/projects/private/1/cam 5.jpg"
+          alt="Background Image"
+          class="background-image"
+        />
+        <div class="overlay"></div>
+      </div>
+      <!-- Text content -->
+      <div class="social-media-text">
+        <h1 class="main-title" data-translate="aboutUp">About Us</h1>
+        <p class="description2" data-translate="usDc"></p>
+      </div>
+
+      <button
+        class="order-buttons"
+        data-translate="orderProjectDesign"
+        onclick="location.href='index.html'"
+      ></button>
+    </div>
+    <!-- Blank Space -->
+    <div style="height: 100px"></div>
+    <!-- Adjust height as needed -->
+    <div class="title" data-translate="advantagesUp"></div>
+    <div style="height: 40px"></div>
+    <!-- Adjust height as needed -->
+    <div class="description" data-translate="advantagesUpDescription"></div>
+    <div class="icon-row2">
+      <div class="icon-item2">
+        <img
+          src="https://static.tildacdn.pro/lib/tildaicon/31383063-3636-4465-b765-623939643934/design.svg"
+          alt="Icon 1"
+          class="icon-image2"
+        />
+        <p class="icon-title2" data-translate="upDesign"></p>
+        <p class="icon-description2" data-translate="upDesignDesc"></p>
+      </div>
+      <div class="icon-item2">
+        <img
+          src="https://static.tildacdn.pro/lib/tildaicon/65336162-6138-4435-b533-633832346635/touragency_group.svg"
+          alt="Icon 1"
+          class="icon-image2"
+        />
+        <p class="icon-title2" data-translate="indivualApp">Title 1</p>
+        <p class="icon-description2" data-translate="exactPrImDesc"></p>
+      </div>
+      <div class="icon-item2">
+        <img
+          src="https://static.tildacdn.pro/lib/tildaicon/35333563-6232-4131-a562-663033373163/8yo_hours.svg"
+          alt="Icon 1"
+          class="icon-image2"
+        />
+        <p class="icon-title2" data-translate="exactPrIm">Title 1</p>
+        <p class="icon-description2" data-translate="upDesignDesc"></p>
+      </div>
+      <div class="icon-item2">
+        <img
+          src="https://static.tildacdn.pro/lib/tildaicon/65633137-3839-4862-a661-663538623232/Tilda_Icons_32_profession_builder.svg"
+          alt="Icon 1"
+          class="icon-image2"
+        />
+        <p class="icon-title2" data-translate="constCrews">Title 1</p>
+        <p class="icon-description2" data-translate="constCrewsDesc"></p>
+      </div>
+      <!-- Repeat for each icon item -->
+    </div>
+    <div class="grayed-Container">
+      <div style="height: 100px"></div>
+      <!-- Adjust height as needed -->
+      <div class="social-media-text">
+        <h1 class="main-title">Dceeny Studio</h1>
+        <div style="height: 20px"></div>
+        <p class="description3" data-translate="usDc"></p>
+      </div>
+    </div>
+    <div class="team-container">
+      <!-- First row: You and your colleague -->
+      <div class="team-row">
+        <div class="team-member">
+          <img
+            src="assets/images/teeam members/rostom.jpg"
+            alt="Your Name"
+            class="team-photo"
+          />
+          <div class="team-info">
+            <h3 class="team-name" data-translate="rostom"></h3>
+            <p class="team-occupation" data-translate="cEO"></p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img
+            src="assets/images/teeam members/ilyes.jpg"
+            alt="Colleague Name"
+            class="team-photo"
+          />
+          <div class="team-info">
+            <h3 class="team-name" data-translate="ilyes"></h3>
+            <p class="team-occupation" data-translate="cOO"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Second row: Rest of the team -->
+      <div class="team-row">
+        <div class="team-member">
+          <img
+            src="assets/images/teeam members/raouf.jpg"
+            alt="Team Member 1"
+            class="team-photo"
+          />
+          <div class="team-info">
+            <h3 class="team-name" data-translate="raouf"></h3>
+            <p class="team-occupation" data-translate="interiorArchitect"></p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img
+            src="assets/images/teeam members/haithem.jpg"
+            alt="Team Member 2"
+            class="team-photo"
+          />
+          <div class="team-info">
+            <h3 class="team-name" data-translate="haithem"></h3>
+            <p class="team-occupation" data-translate="architectureDrafter"></p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img
+            src="assets/images/teeam members/youcef.jpg"
+            alt="Team Member 3"
+            class="team-photo"
+          />
+          <div class="team-info">
+            <h3 class="team-name" data-translate="youcef"></h3>
+            <p class="team-occupation" data-translate="projectManager"></p>
+          </div>
+        </div>
+        <!-- Add more team members as needed -->
+      </div>
+    </div>
+    <div style="height: 100px"></div>
+    <!-- Adjust height as needed -->
+    <div class="title" data-translate="joinUS"></div>
+    <div style="height: 50px"></div>
+    <div class="form-wrapper">
+      <form id="professionalForm">
+        <div class="input-group">
+          <label for="fullName" class="input-label">
+            <span data-translate="fName">Full Name</span>
+            <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            data-placeholder="enterFName"
+            required
+          />
+          <span class="error-message" data-translate="fNameReq"
+            >Full name is required.</span
+          >
+        </div>
+        <div class="input-group">
+          <label for="phoneNumber" class="input-label">
+            <span data-translate="phoneNum">Phone Number</span>
+            <span class="required">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Enter your phone number"
+            data-placeholder="enterphoneNum"
+            required
+          />
+          <span class="error-message" data-translate="phoneNumReq"
+            >Phone number is required.</span
+          >
+        </div>
+        <div class="input-group">
+          <label for="profession" class="input-label">
+            <span data-translate="profession"></span>
+            <span class="required">*</span>
+          </label>
+          <select
+            id="profession"
+            name="profession"
+            required
+            aria-required="true"
+            data-placeholder="selectProfession"
+            class="dropdown-profession"
+          >
+            <option
+              value=""
+              disabled
+              selected
+              data-translate="selectProfession"
+            >
+              Select your profession
+            </option>
+            <option value="architect" data-translate="architect">
+              
+            </option>
+            <option value="interiorArchitect" data-translate="interiorArchitect">
+             
+            </option>
+            <option value="civilEngineer" data-translate="civilEngineer">
+             
+            </option>
+            <option value="surveyor" data-translate="surveyor">
+            </option>
+            <option value="projectManager" data-translate="projectManager">
+            </option>
+            <option value="architectureDrafter" data-translate="architectureDrafter">
+              
+            </option>
+            <option value="other" data-translate="other">Other</option>
+          </select>
+          <span class="error-message" data-translate="professionReq">
+            Profession selection is required.
+          </span>
+        </div>
+
+        <button type="submit" class="submit-button" data-translate="submit">
+          Submit Form
+        </button>
+      </form>
+      <!-- Thank-you message (hidden by default) -->
+      <div class="thank-you-message" data-translate="thankYouMsg" style="display: none">
+        Thank you! Your data has been submitted.
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
