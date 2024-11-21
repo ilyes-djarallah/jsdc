@@ -960,6 +960,7 @@ body.font-ar .submit-button {
   .social-media-text p.description2 {
     font-size: 1rem;
     max-width: 500px;
+    margin: auto 30px;
   }
   .social-media-icons .icon-link {
     width: 40px;
@@ -1346,9 +1347,10 @@ form#professionalForm {
   margin-bottom: 10px;
 }
 .icon-title-services {
-  font-size: 1.3rem; /* Set a readable font size for titles */
+  font-size: 1.2rem; /* Set a readable font size for titles */
   font-weight: 500; /* Slightly lighter font weight */
   color: black; /* Darker gray for the titles */
+  padding: 0 20px;
 }
 
 /*============================================================================================================================*/
@@ -1387,6 +1389,7 @@ form#professionalForm {
   font-weight: 300;
   line-height: 1.5;
   text-align: center;
+  margin: 0 auto;
 }
 /* Responsive design */
 @media (max-width: 960px) {
@@ -1403,6 +1406,49 @@ form#professionalForm {
 
   .social-media-text p.services-description2 {
     font-size: 1rem;
-    max-width: 500px;
+    max-width: 700px;
+    margin: 0 30px;
   }
+}
+/*============================================================================================================================*/
+.icon-row-small-ones {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  justify-content: flex-start;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+.icon-item-small-ones {
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 300px;
+  margin-bottom: 50px;
+  /* margin-right: auto;
+  margin-left: auto; */
+}
+
+.small-icon-image-services {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.small-icon-title-services {
+  font-size: 1.3rem; /* Set a readable font size for titles */
+  font-weight: 500; /* Slightly lighter font weight */
+  color: black; /* Darker gray for the titles */
+}
+@media (max-width: 960px) {
+  .icon-row-small-ones {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+.small-icons-title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
