@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dceeny</title>
+
+    <!-- External Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Fancybox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <!-- Translation Script -->
+    <script src="../scripts/translations.js"></script>
+    <link rel="icon" href="../assets/images/favicon.png" />
+  </head>
+  <script>
+    $(document).ready(function () {
+      $("#header-container").load("../elements/header.html", function () {
+        const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
+        applyTranslations(savedLanguage); // Call translation function after loading
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#footer").load("../elements/footer.html", function () {
+        applyTranslations(localStorage.getItem("preferredLanguage") || "en");
+      });
+    });
+  </script>
+
+  <body>
+    <header id="header-container"></header>
+    <!-- Text Section -->
+    <div class="gallery-text">
+      <h1>Gallery Title</h1>
+      <p>A description of the gallery can go here.</p>
+    </div>
+    <!-- Gallery Section -->
+    <div class="gallery-shit">
+      <div class="gallery-row-shit">
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 1"
+          />
+        </a>
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 2"
+          />
+        </a>
+      </div>
+      <div class="gallery-row-shit">
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 1"
+          />
+        </a>
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 2"
+          />
+        </a>
+      </div>
+      <div class="gallery-row-shit">
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 1"
+          />
+        </a>
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 2"
+          />
+        </a>
+      </div>
+      <div class="gallery-row-shit">
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 1"
+          />
+        </a>
+        <a
+          href="../assets/images/projects/private/Riyadh/cam 5.jpg"
+          data-fancybox="gallery"
+        >
+          <img
+            src="../assets/images/projects/private/Riyadh/cam 5.jpg"
+            alt="Image 2"
+          />
+        </a>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        Thumbs: false, // Disable thumbnails
+        Toolbar: true, // Disable toolbar if not needed
+      });
+    </script>
+  </body>
+</html>

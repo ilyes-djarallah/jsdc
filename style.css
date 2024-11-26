@@ -1350,7 +1350,7 @@ form#professionalForm {
   font-size: 1.2rem; /* Set a readable font size for titles */
   font-weight: 500; /* Slightly lighter font weight */
   color: black; /* Darker gray for the titles */
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 /*============================================================================================================================*/
@@ -1452,3 +1452,177 @@ form#professionalForm {
   margin-bottom: 3rem;
   text-align: center;
 }
+/*============================================================================================================================*/
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-row {
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  position: relative;
+  width: 33.3333333333%;
+  aspect-ratio: 1.5;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease, filter 1s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: grayscale(50%);
+}
+
+.overlay {
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  line-height: 2;
+}
+
+.overlay p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.overlay h1,
+h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  animation: slideIn 0.7s ease forwards, backwards;
+}
+.overlay h1 {
+  animation: slideIn 0.7s ease forwards, backwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 960px) {
+  .gallery-item {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-item {
+    width: 100%; /* One item per row */
+  }
+}
+/*============================================================================================================================*/
+.gallery-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Text Section */
+.gallery-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.gallery-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Gallery Section */
+.gallery-shit {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* Gallery Row */
+.gallery-row-shit {
+  display: flex;
+  gap: 30px; /* Space between images */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Default styles for images inside rows */
+.gallery-row-shit a {
+  display: flex;
+  max-width: 100%;
+  
+}
+
+.gallery-row-shit a img {
+  height: 500px;
+  object-fit: cover;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+/* Row-specific styles for odd rows */
+.gallery-row-shit:nth-child(odd) a:first-child {
+  flex: 1; /* Small image takes 1 part */
+}
+
+.gallery-row-shit:nth-child(odd) a:last-child {
+  flex: 2; /* Big image takes 2 parts */
+}
+
+/* Row-specific styles for even rows */
+.gallery-row-shit:nth-child(even) a:first-child {
+  flex: 2; /* Big image takes 2 parts */
+}
+
+.gallery-row-shit:nth-child(even) a:last-child {
+  flex: 1; /* Small image takes 1 part */
+}
+
+

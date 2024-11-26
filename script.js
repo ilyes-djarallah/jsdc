@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 });
 
-
-
 /*============================================================================================================================*/
 document.addEventListener("DOMContentLoaded", function () {
   // Function to handle form submissions
@@ -39,7 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Validate required fields
       if (!fullName) {
-        form.querySelector("#fullName + .error-message").style.display = "block";
+        form.querySelector("#fullName + .error-message").style.display =
+          "block";
         isValid = false;
       }
       if (!phoneNumber) {
@@ -61,9 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (type === "professional") {
         const profession = form.querySelector("#profession").value;
         if (!profession) {
-          form
-            .querySelector("#profession + .error-message")
-            .style.display = "block";
+          form.querySelector("#profession + .error-message").style.display =
+            "block";
           isValid = false;
         }
         message += `\n- Profession: ${profession}`;

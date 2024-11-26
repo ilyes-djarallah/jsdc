@@ -114,6 +114,9 @@ const translations = {
     contractorSearchAndCoordination: "Contractor search and coordination",
     deliveryOrganization: "Delivery organization",
     hopeToHear: "WE'RE EXCITED TO HELP YOU WITH YOUR PROJECT!",
+    privateBatna: "Appartement privé - Batna",
+    batna: "Batna",
+    riyadh: "Riyadh",
   },
   fr: {
     projects: "Projets",
@@ -231,6 +234,9 @@ const translations = {
       "Recherche et coordination des entrepreneurs",
     deliveryOrganization: "Organisation des livraisons",
     hopeToHear: "NOUS SOMMES RAVIS DE VOUS AIDER DANS VOTRE PROJET !",
+    privateBatna: "Appartement privé - Batna",
+    batna: "Batna",
+    riyadh: "Riyadh",
   },
   ar: {
     projects: "المشاريع",
@@ -345,6 +351,9 @@ const translations = {
     contractorSearchAndCoordination: "البحث عن المقاولين وتنسيقهم",
     deliveryOrganization: "تنظيم التسليم",
     hopeToHear: "نأمل أن أسمع منك قريبًا",
+    privateBatna: "شقة خاصة - باتنة",
+    batna:"باتنة",
+    riyadh:"حي الرياض",
   },
 };
 
