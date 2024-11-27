@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  background-color: green;
+  background-color: white;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
@@ -403,3 +403,105 @@ body.font-ar .submit-button {
     padding: 10px 0;
   }
 }
+
+/* Style for Slideshow */
+/* Style for Slideshow */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  /* overflow: hidden; */
+  height: 700px; /* Set a height to define the slideshow area */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Overlay Text Styling */
+.overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+
+.overlay-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Down Arrow Icon Styling */
+/* General styling for the down-arrow object */
+/* Styling for the down arrow container */
+.down-arrow {
+  cursor: pointer; /* Make the arrow clickable */
+  position: absolute; /* Position it where you need */
+  bottom: 20px; /* 20px from the bottom */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Center it exactly */
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* Center the content inside */
+  align-items: center;
+  color: white;
+  animation: bounce 1.5s infinite ease-in-out; /* Bounce animation */
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-20px); /* Move up */
+  }
+  50% {
+    transform: translateX(-50%) translateY(0); /* Back to original position */
+  }
+  75% {
+    transform: translateX(-50%) translateY(-10px); /* Slight bounce up */
+  }
+  100% {
+    transform: translateX(-50%) translateY(0); /* Back to original position */
+  }
+}
+/* Styling the SVG inside the container */
+.down-arrow svg {
+  fill: currentColor; /* Allow the color to be inherited from the parent */
+  width: 70px; /* Size the icon */
+  height: 70px;
+  transition: fill 0.3s ease; /* Smooth transition for color change */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/*============================================================================================================================*/
