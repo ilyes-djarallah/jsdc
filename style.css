@@ -899,6 +899,7 @@ body.font-ar .submit-button {
 .social-media-text,
 .social-media-icons {
   position: relative; /* Layer the content on top of the background */
+  z-index: 4;
   
 }
 
@@ -907,6 +908,7 @@ body.font-ar .submit-button {
   font-weight: 500;
   margin-bottom: 2rem;
   text-align: center;
+  z-index: 4;
 }
 
 .social-media-text p.description2 {
@@ -915,6 +917,7 @@ body.font-ar .submit-button {
   line-height: 1.5;
   margin-bottom: 4rem;
   text-align: center;
+  z-index: 4;
 }
 .description3 {
   font-size: 26px;
@@ -925,10 +928,12 @@ body.font-ar .submit-button {
   line-height: 1.5;
   margin-bottom: 4rem;
   text-align: center;
+  z-index: 4;
 }
 .subtext {
   font-size: 16px;
   font-weight: 300;
+  z-index: 4;
   margin-top: 5rem;
   
 }
@@ -936,6 +941,7 @@ body.font-ar .submit-button {
   display: flex;
   gap: 60px;
   margin-top: 1.5rem;
+  z-index: 4;
 }
 
 .social-media-icons .icon-link {
@@ -945,6 +951,7 @@ body.font-ar .submit-button {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s;
+  z-index:4;
 }
 
 .social-media-icons .icon-link:hover {
