@@ -891,7 +891,7 @@ body.font-ar .submit-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .8); /* Darkness overlay */
+  background: rgba(0, 0, 0, 0.8); /* Darkness overlay */
   z-index: 3; /* Ensures overlay is above the image */
 }
 
