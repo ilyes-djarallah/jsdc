@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  background-color: blueviolet;
+  background-color: green;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
@@ -868,111 +868,4 @@ body.font-ar .submit-button {
   overflow: hidden;
 }
 
-/* Background image with overlay */
-.background-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image scales and fills proportionally */
-  z-index: 0; /* Ensure it's behind the text */
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image scales and fills proportionally */
-  /* position: absolute; */
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Darkness overlay */
-  z-index: 1; /* Ensures overlay is above the image */
-}
-
-/* Content styles */
-.social-media-text,
-.social-media-icons {
-  position: relative; /* Layer the content on top of the background */
-  z-index: 2;
-}
-
-.social-media-text h1.main-title {
-  font-size: 48px;
-  font-weight: 500;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.social-media-text p.description2 {
-  font-size: 18px;
-  max-width: 600px;
-  line-height: 1.5;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-.description3 {
-  font-size: 26px;
-  font-weight: 100;
-  max-width: 600px;
-  margin: 0 auto;
-  align-items: center;
-  line-height: 1.5;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-.subtext {
-  font-size: 16px;
-  font-weight: 300;
-  margin-top: 5rem;
-  z-index: 2;
-}
-.social-media-icons {
-  display: flex;
-  gap: 60px;
-  margin-top: 1.5rem;
-}
-
-.social-media-icons .icon-link {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s;
-}
-
-.social-media-icons .icon-link:hover {
-  transform: scale(1.1);
-}
-
-/* Responsive design */
-/* @media (max-width: 960px) {
-  .social-media-container {
-    margin: 0;
-    padding: 0;
-  }
-  .social-media-text h1.main-title {
-    font-size: 2rem;
-  }
-
-  .social-media-text p.description2 {
-    font-size: 1rem;
-    max-width: 500px;
-    margin: auto 30px;
-  }
-  .social-media-icons .icon-link {
-    width: 40px;
-    height: 40px;
-  }
-  .social-media-icons {
-    gap: 2rem;
-  }
-} */
 
