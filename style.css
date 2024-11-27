@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&display=swap");
+
+/* Define font families */
+:root {
+  --font-ltr: "Montserrat", sans-serif;
+  --font-rtl: "Noto Kufi Arabic", serif;
+}
+
+/* Direction styling */
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Font styling */
+.font-en {
+  font-family: "Montserrat", sans-serif; /* Specify English/French font */
+}
+
+.font-fr {
+  font-family: "Montserrat", sans-serif; /* Specify French font */
+}
+
+.font-ar {
+  font-family: "Noto Kufi Arabic", sans-serif; /* Specify Arabic font */
+}
+/* Apply fonts to placeholder text based on language direction */
+input::placeholder {
+  font-family: "Montserrat", sans-serif; /* Default font */
+}
+
+body.font-en input::placeholder {
+  font-family: "Montserrat", sans-serif; /* Default font */
+}
+
+body.font-fr input::placeholder {
+  font-family: "Montserrat", sans-serif; /* Default font */
+}
+
+body.font-ar input::placeholder {
+  font-family: "Noto Kufi Arabic", sans-serif; /* Specify Arabic font */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Default font for LTR languages */
+html,
+body {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  font-family: "Montserrat", sans-serif;
+  background-color: green;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.content-wraper12412 {
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Font for Arabic language with RTL */
+body.font-ar.rtl {
+  font-family: "Noto Kufi Arabic", serif !important;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Optional: Apply font change on body when switching between languages */
+body.font-en {
+  font-family: "Montserrat", sans-serif;
+}
+
+body.font-fr {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* General LTR font application */
+.nav-link,
+.dropdown-link,
+.p-buttons,
+.about-buttons,
+.submit-button {
+  font-family: var(--font-ltr) !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Apply RTL font for Arabic */
+body.font-ar .nav-link,
+body.font-ar .dropdown-link,
+body.font-ar .p-buttons,
+body.font-ar .about-buttons,
+body.font-ar .submit-button {
+  font-family: var(--font-rtl) !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.page-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #f0eee9;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo Styles */
+.navbar-logo img {
+  flex: 1;
+  width: 350px; /* Adjust size as needed */
+  height: auto;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Button */
+.nav-link {
+  background: none;
+  border: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  padding: 10px 20px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* Container styling for positioning dropdown */
+.nav-item-container {
+  position: relative;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50px; /* Position dropdown below the "PROJECTS" button */
+  left: 50%; /* Center the dropdown */
+  transform: translateX(-50%); /* Center the dropdown horizontally */
+  background-color: #d3d3d3; /* Light gray background */
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 180px; /* Set your desired width */
+  height: auto; /* This height will adjust to fit the content by default */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Arrow on top of the dropdown */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust arrow position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #d3d3d3; /* Match dropdown background */
+}
+
+/* Dropdown Button Styling */
+.dropdown-link {
+  background: none;
+  border: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Dropdown Button Hover Effect */
+.dropdown-link:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+/* Show dropdown on hover */
+.nav-item-container:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible; /* Keeps dropdown visible */
+  transition-delay: 0s; /* No delay when showing */
+}
+.nav-item-container .dropdown-menu {
+  transition-delay: 150ms; /* 0.5s delay when hiding */
+}
+
+.nav-link:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-lge-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50px; /* Position dropdown below the "PROJECTS" button */
+  left: 50%; /* Center the dropdown */
+  transform: translateX(-50%); /* Center the dropdown horizontally */
+  background-color: #d3d3d3; /* Light gray background */
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 80px; /* Set your desired width */
+  height: auto; /* This height will adjust to fit the content by default */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Arrow on top of the dropdown */
+.dropdown-lge-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust arrow position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #d3d3d3; /* Match dropdown background */
+}
+
+/* Show dropdown on hover */
+.nav-item-container:hover .dropdown-lge-menu {
+  opacity: 1;
+  visibility: visible; /* Keeps dropdown visible */
+  transition-delay: 0s; /* No delay when showing */
+}
+.nav-item-container .dropdown-lge-menu {
+  transition-delay: 150ms; /* 0.5s delay when hiding */
+}
+
+/* Mobile and small screen styles */
+@media (max-width: 960px) {
+  /* Navbar styling adjustments for smaller screens */
+  .navbar {
+    flex-direction: column !important;
+    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+  }
+  /* Ensure RTL language does not change column layout */
+  body.rtl .navbar {
+    flex-direction: column !important; /* Force column layout in RTL */
+    align-items: center;
+  }
+
+  /* Logo resizing */
+  .navbar-logo img {
+    width: 300px; /* Smaller logo for mobile */
+  }
+
+  /* Navigation links styling for mobile */
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Take full width on mobile */
+  }
+
+  /* Adjust nav link spacing and font size for readability on smaller screens */
+  .nav-link {
+    font-size: 14px;
+    padding: 10px 0;
+    width: 100%; /* Make links full width */
+    text-align: center;
+  }
+  .dropdown-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Dropdown menu adjustments for mobile */
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column; /* Stack them with the other nav items */
+    opacity: 0; /* Hidden by default */
+    /* visibility: hidden; */
+    align-items: center;
+    left: 0;
+    max-height: 0;
+    transform: translateX(0%); /* Center the dropdown horizontally */
+    /* transition: opacity 3s ease, height 3s ease, visibility 3s ease; */
+    overflow: hidden;
+    position: static; /* Make them part of the normal flow */
+    background-color: transparent; /* Remove background */
+    box-shadow: none; /* Remove shadow */
+    padding: 0; /* Remove padding */
+    visibility: hidden;
+    padding: 0;
+  }
+  /* Smooth expand and collapse using keyframes */
+  @keyframes expandDropdown {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 300px;
+      opacity: 1;
+    }
+  }
+  @keyframes collapseDropdown {
+    from {
+      max-height: 300px;
+      opacity: 1;
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+  /* Show the dropdown smoothly when class "show-dropdown" is added */
+  .show-dropdown {
+    opacity: 1;
+    visibility: visible;
+    animation: expandDropdown 0.5s ease forwards; /* Expand animation */
+    max-height: 300px; /* Adjust this height based on content */
+  }
+  /* Optional collapse animation when hiding */
+  .dropdown-menu:not(.show-dropdown) {
+    animation: collapseDropdown 0.5s ease forwards; /* Collapse animation */
+  }
+
+  /* Dropdown link styling on mobile */
+  .dropdown-link {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  /* Center and adjust nav links for mobile */
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
