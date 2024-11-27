@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  background-color: white;
+  background-color: green;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
@@ -683,3 +683,948 @@ body.font-ar .submit-button {
 }
 
 /*============================================================================================================================*/
+/* Container to keep buttons in a row */
+.prvpub-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Centering the buttons */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Basic button styling */
+.p-buttons {
+  /* padding: 20px 100px; */
+  height: 60px;
+  width: 300px;
+  margin: 50px 0px;
+  border: 3px solid black; /* Thick black border */
+  background-color: white; /* Default background color */
+  color: black; /* Text color */
+  text-transform: uppercase;
+  font-size: 14px; /* Adjust font size */
+  font-weight: 800;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.5s; /* Smooth transition for hover effect */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Hover effect to change background color to default gray */
+.p-buttons:hover {
+  background-color: lightgray;
+}
+@media (max-width: 960px) {
+  .prvpub-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 5px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .p-buttons {
+    margin: 0px 200px;
+    height: 60px;
+    width: 400px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+/*============================================================================================================================*/
+/* Container styling for the picture button */
+/* Parent container for row layout */
+.image-button-row {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Individual button styling */
+.picture-button {
+  position: relative;
+  width: 50%; /* Each button takes 48% of the row */
+  height: 400px; /* Set fixed height for buttons */
+  overflow: hidden;
+  cursor: pointer;
+  background-color: black;
+  flex: 1; /* Ensures equal width for both buttons */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Image styling */
+.button-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers button area */
+  transition: opacity 0.5s ease;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.picture-button:hover .button-image {
+  opacity: 0.5; /* Darken the image on hover */
+}
+
+/* Overlay text styling */
+.overlay-text2 {
+  position: absolute;
+  font-weight: 500;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -1%); /* Perfectly center text */
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none; /* Prevent text from blocking clicks */
+}
+
+.picture-button:hover .overlay-text2 {
+  opacity: 1; /* Fade in the text */
+  transform: translate(-50%, -50%) translateY(-50%); /* Move the text slightly upwards during hover */
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 960px) {
+  .image-button-row {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .picture-button {
+    width: 100%; /* Full width for each button on small screens */
+    height: auto; /* Adjust height to fit image on smaller screens */
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .button-image {
+    display: block; /* Ensures no gap below the image */
+    transition: none; /* Remove transition on image */
+    height: auto;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .overlay-text2 {
+    opacity: 1; /* Show text without animation */
+    transform: translate(-50%, -50%); /* Center text without animation */
+    transition: none; /* Disable text transition on small screens */
+  }
+
+  .picture-button:hover .button-image {
+    opacity: 0.5; /* Disable hover effect */
+  }
+}
+/*============================================================================================================================*/
+/* Basic button styling */
+.parent-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.about-buttons {
+  /* padding: 20px 100px; */
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 20px 50px;
+  border: 3px solid black; /* Thick black border */
+  background-color: white; /* Default background color */
+  color: black; /* Text color */
+  text-transform: uppercase;
+  font-size: 14px; /* Adjust font size */
+  font-weight: 800;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.5s; /* Smooth transition for hover effect */
+  z-index: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*============================================================================================================================*/
+/* Container styles */
+.social-media-container {
+  position: relative;
+  display: flex;
+  /* height: 600px; */
+  width: 100%;
+  min-height: 400px;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+  overflow: hidden;
+}
+
+/* Background image with overlay */
+.background-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales and fills proportionally */
+  z-index: 0; /* Ensure it's behind the text */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales and fills proportionally */
+  /* position: absolute; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darkness overlay */
+  z-index: 1; /* Ensures overlay is above the image */
+}
+
+/* Content styles */
+.social-media-text,
+.social-media-icons {
+  position: relative; /* Layer the content on top of the background */
+  z-index: 2;
+}
+
+.social-media-text h1.main-title {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.social-media-text p.description2 {
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.description3 {
+  font-size: 26px;
+  font-weight: 100;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.subtext {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 5rem;
+  z-index: 2;
+}
+.social-media-icons {
+  display: flex;
+  gap: 60px;
+  margin-top: 1.5rem;
+}
+
+.social-media-icons .icon-link {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.social-media-icons .icon-link:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 960px) {
+  .social-media-container {
+    margin: 0;
+    padding: 0;
+  }
+  .social-media-text h1.main-title {
+    font-size: 2rem;
+  }
+
+  .social-media-text p.description2 {
+    font-size: 1rem;
+    max-width: 500px;
+    margin: auto 30px;
+  }
+  .social-media-icons .icon-link {
+    width: 40px;
+    height: 40px;
+  }
+  .social-media-icons {
+    gap: 2rem;
+  }
+}
+
+/*============================================================================================================================*/
+/* General container styling */
+/* Wrapper container that will center the form */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the form horizontally */
+  justify-content: center; /* Centers the form vertically */
+  box-sizing: border-box;
+  height: auto;
+  min-height: 400px; /* Fallback for consistent height */
+  transition: height 0.3s ease-in-out; /* Smooth height transition */
+  position: relative;
+}
+
+/* Input group styling */
+.input-group {
+  width: 100%; /* Full width of the container */
+  max-width: 800px; /* Restrict input group width to 800px */
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding doesn't increase width */
+  border-radius: 0;
+}
+/* Label styling */
+.input-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+/* Required label styling */
+.required {
+  color: black;
+}
+
+/* Input field styling */
+.input-group input {
+  width: 100%; /* Full width of the input group */
+  padding: 20px; /* Increased padding for more space */
+  font-size: 1.2rem; /* Increased font size */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  border-radius: 0;
+}
+/* Form styling */
+form#orderForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Allow form to take up full width */
+  max-width: 700px; /* Max width of form */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px; /* Optional to make form corners rounded */
+  height: auto;
+}
+.input-group input:focus {
+  border-color: black;
+}
+
+/* Error message styling */
+.error-message {
+  font-size: 0.85rem;
+  color: red;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  display: none;
+}
+
+/* Submit button styling */
+.submit-button {
+  text-transform: uppercase;
+  width: 50%; /* Increased width for the button */
+  height: 60px; /* Larger button height */
+  /* padding: 16px; */
+  font-size: 1.3rem; /* Increased font size */
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px auto;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.submit-button:hover {
+  background-color: #333;
+}
+
+/* Thank-you message styling */
+.thank-you-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0px;
+  max-width: 700px; /* Match form's max width */
+  margin: 0 auto;
+}
+
+/* Responsive styling */
+@media (max-width: 960px) {
+  .form-wrapper {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .input-group {
+    max-width: 100%; /* Makes the input group stretch to the full width of smaller screens */
+  }
+
+  .input-group input {
+    font-size: 1.1rem; /* Slightly smaller font size for smaller screens */
+    padding: 16px; /* Increased padding */
+  }
+
+  .submit-button {
+    width: 60%; /* Make the button wider for smaller screens */
+    padding: 15px;
+    font-size: 1.2rem; /* Increased font size */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+/* Add smooth transitions */
+.form-wrapper,
+.thank-you-message {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* When hidden */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+/*============================================================================================================================*/
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 0;
+  width: 100%;
+  background-color: #f0eee9;
+  flex-wrap: wrap;
+  height: 80px;
+}
+.right-s {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+}
+/* Social media icons */
+.social-media {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: right;
+  padding: 0 30px;
+}
+
+.icon-s {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: gray;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+.icon-image3 {
+  fill: gray;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.icon-s:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive styling */
+@media (max-width: 960px) {
+  #footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  .icon-s,
+  .icon-image3 {
+    margin: 5px 0; /* Add spacing between icons */
+  }
+}
+/*============================================================================================================================*/
+.order-buttons {
+  /* padding: 20px 100px; */
+  font-family: inherit;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 20px 50px;
+  border: 0px; /* Thick black border */
+  background-color: white; /* Default background color */
+  color: black; /* Text color */
+  text-transform: uppercase;
+  font-size: 16px; /* Adjust font size */
+  font-weight: 700;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.5s; /* Smooth transition for hover effect */
+  z-index: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*============================================================================================================================*/
+/* Container styles */
+.team-container {
+  justify-content: center;
+  align-items: center;
+  /* width: 800px; */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+/* Row styles */
+.team-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Team member styles */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 300px; /* Adjust as needed */
+}
+.rtl .team-member {
+  text-align: right;
+}
+
+/* Photo styles */
+.team-photo {
+  width: 100%; /* Responsive image */
+  height: auto;
+  border-radius: 0px;
+  margin-bottom: 0.5rem;
+}
+
+/* Text styles */
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.team-occupation {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 960px) {
+  .team-row {
+    justify-content: center; /* Center images for small screens */
+    gap: 1rem;
+  }
+
+  .team-member {
+    flex: 0 0 calc(50% - 1rem); /* Two images per row */
+    max-width: calc(50% - 1rem);
+  }
+}
+/*============================================================================================================================*/
+/* Form styling */
+form#professionalForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Allow form to take up full width */
+  max-width: 700px; /* Max width of form */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px; /* Optional to make form corners rounded */
+  height: auto;
+}
+.dropdown-profession {
+  width: 100%; /* Full width of the input group */
+  padding: 20px; /* Increased padding for more space */
+  font-size: 1.2rem; /* Increased font size */
+  border: 2px solid #ccc;
+  border-radius: 0px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  background-color: white;
+}
+
+.dropdown-profession:focus {
+  border-color: black;
+}
+
+/* Optional: Additional styling for disabled placeholder */
+.dropdown-profession option:disabled {
+  color: #999;
+}
+/* Responsive styling */
+@media (max-width: 960px) {
+  .dropdown-profession {
+    font-size: 1.1rem; /* Slightly smaller font size for smaller screens */
+    padding: 16px; /* Increased padding */
+  }
+}
+/*============================================================================================================================*/
+#services-page.icon-row {
+  display: flex;
+  justify-content: center; /* Evenly space items across the row */
+  gap: 170px;
+  margin: 10px auto 0px; /* Center the row with spacing */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+.icon-image-services {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.icon-title-services {
+  font-size: 1.2rem; /* Set a readable font size for titles */
+  font-weight: 500; /* Slightly lighter font weight */
+  color: black; /* Darker gray for the titles */
+  /* padding: 0 20px; */
+}
+
+/*============================================================================================================================*/
+.services-overlay-container {
+  position: relative;
+  display: flex;
+  /* height: 600px; */
+  width: 100%;
+  min-height: 400px;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+  overflow: hidden;
+}
+.social-media-text h1.services-main-title {
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.vertical-dividering {
+  width: 200px;
+  height: 1px;
+  background-color: #ccc;
+  margin: 50px auto;
+  text-align: center;
+}
+.social-media-text p.services-description2 {
+  font-size: 20px;
+  max-width: 600px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
+}
+/* Responsive design */
+@media (max-width: 960px) {
+  #services-page.icon-row {
+    gap: 20px;
+  }
+  .services-overlay-container {
+    margin: 0;
+    padding: 0;
+  }
+  .social-media-text h1.services-main-title {
+    font-size: 2rem;
+  }
+
+  .social-media-text p.services-description2 {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 30px;
+  }
+}
+/*============================================================================================================================*/
+.icon-row-small-ones {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  justify-content: flex-start;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+.icon-item-small-ones {
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 300px;
+  margin-bottom: 50px;
+  /* margin-right: auto;
+  margin-left: auto; */
+}
+
+.small-icon-image-services {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.small-icon-title-services {
+  font-size: 1.3rem; /* Set a readable font size for titles */
+  font-weight: 500; /* Slightly lighter font weight */
+  color: black; /* Darker gray for the titles */
+}
+@media (max-width: 960px) {
+  .icon-row-small-ones {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+.small-icons-title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+/*============================================================================================================================*/
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-row {
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  position: relative;
+  width: 33.3333333333%;
+  aspect-ratio: 1.5;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease, filter 1s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: grayscale(50%);
+}
+
+.overlay {
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  line-height: 2;
+}
+
+.overlay p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.overlay h1,
+h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  animation: slideIn 0.7s ease forwards, backwards;
+}
+.overlay h1 {
+  animation: slideIn 0.7s ease forwards, backwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 960px) {
+  .gallery-item {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-item {
+    width: 100%; /* One item per row */
+  }
+}
+/*============================================================================================================================*/
+.gallery-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Text Section */
+.gallery-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.gallery-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Gallery Section */
+.gallery-shit {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* Gallery Row */
+.gallery-row-shit {
+  display: flex;
+  gap: 30px; /* Space between images */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Default styles for images inside rows */
+.gallery-row-shit a {
+  display: flex;
+  max-width: 100%;
+}
+
+.gallery-row-shit a img {
+  height: 500px;
+  object-fit: cover;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+/* Row-specific styles for odd rows */
+.gallery-row-shit:nth-child(odd) a:first-child {
+  flex: 1; /* Small image takes 1 part */
+}
+
+.gallery-row-shit:nth-child(odd) a:last-child {
+  flex: 2; /* Big image takes 2 parts */
+}
+
+/* Row-specific styles for even rows */
+.gallery-row-shit:nth-child(even) a:first-child {
+  flex: 2; /* Big image takes 2 parts */
+}
+
+.gallery-row-shit:nth-child(even) a:last-child {
+  flex: 1; /* Small image takes 1 part */
+}
