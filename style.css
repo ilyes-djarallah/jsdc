@@ -891,7 +891,7 @@ body.font-ar .submit-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Darkness overlay */
+  background: rgba(0, 0, 0, 0); /* Darkness overlay */
   z-index: 3; /* Ensures overlay is above the image */
 }
 
@@ -1129,7 +1129,7 @@ form#orderForm {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 0;
   position: relative;
   margin-top: auto;
   margin-bottom: 0;
