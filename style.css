@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  background-color: green;
+  background-color: white;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
