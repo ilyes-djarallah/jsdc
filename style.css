@@ -1631,4 +1631,10 @@ h2 {
   .gallery-row-shit a img {
     height: 300px;
   }
+  .gallery-shit{
+    gap: 15px;
+  }
+  .gallery-row-shit{
+    gap: 15px;
+  } 
 }
