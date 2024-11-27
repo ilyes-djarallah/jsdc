@@ -56,7 +56,7 @@ body {
   max-width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #155724;
+  background-color: white;
 }
 #loading-screen {
   position: fixed;
@@ -1599,7 +1599,6 @@ h2 {
 .gallery-row-shit a {
   display: flex;
   max-width: 100%;
-  
 }
 
 .gallery-row-shit a img {
@@ -1626,5 +1625,3 @@ h2 {
 .gallery-row-shit:nth-child(even) a:last-child {
   flex: 1; /* Small image takes 1 part */
 }
-
-
