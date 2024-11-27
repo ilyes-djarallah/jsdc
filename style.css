@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  background-color: white;
+  background-color: green;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
@@ -503,5 +503,81 @@ body.font-ar .submit-button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+/*============================================================================================================================*/
+
+.first-line {
+  text-transform: uppercase; /* Makes the text uppercase */
+  font-weight: 800; /* Makes the text bold */
+  font-size: 14px; /* Small size */
+  margin-bottom: 200px; /* Huge space below this line */
+}
+
+.second-line {
+  font-weight: bold; /* Makes the text bold */
+  font-size: 48px; /* Huge size */
+}
+/*============================================================================================================================*/
+.grayed-Container {
+  background-color: #f2f2f2;
+}
+.title {
+  text-transform: uppercase;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Styles for the description text */
+.description {
+  font-size: 20px; /* Average font size */
+  font-weight: 200;
+  color: #333; /* Black color */
+  line-height: 2; /* Spacing between lines for readability */
+  max-width: 600px; /* Constrain width to create natural breaks */
+  margin: auto; /* Center the text block and add spacing */
+  padding: 0 15px; /* Add padding for comfortable reading */
+  text-align: center;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center; /* Evenly space items across the row */
+  gap: 100px;
+  margin: 40px auto 0px; /* Center the row with spacing */
+  max-width: 1000px; /* Set a max-width for the row */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.icon-item {
+  text-align: center; /* Center-align each icon and title */
+  flex: 1; /* Make items flexible to adjust in row */
+  min-width: 100px;
+}
+
+.icon-image {
+  width: 85px; /* Set a size for the icons */
+  height: 85px; /* Keep icons square */
+  margin-bottom: 10px; /* Space between icon and title */
+}
+
+.icon-title {
+  font-size: 1rem; /* Set a readable font size for titles */
+  font-weight: 800; /* Slightly lighter font weight */
+  color: black; /* Darker gray for the titles */
+}
+
+@media (max-width: 960px) {
+  .icon-row {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center the icons in a column */
+    /* gap:30px; */
+  }
+
+  .icon-item {
+    margin-bottom: 20px; /* Adds space between items in the column */
+    min-width: 0; /* Allows items to shrink */
+  }
 }
 /*============================================================================================================================*/
