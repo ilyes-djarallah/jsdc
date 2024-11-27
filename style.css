@@ -826,10 +826,35 @@ body.font-ar .submit-button {
 .parent-container {
   display: flex;
   justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.about-buttons {
+  /* padding: 20px 100px; */
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 20px 50px;
+  border: 3px solid black; /* Thick black border */
+  background-color: white; /* Default background color */
+  color: black; /* Text color */
+  text-transform: uppercase;
+  font-size: 14px; /* Adjust font size */
+  font-weight: 800;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.5s; /* Smooth transition for hover effect */
+  z-index: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*============================================================================================================================*/
 /* Container styles */
 .social-media-container {
-  position: relative; /* Anchor for the absolute elements */
+  position: relative;
   display: flex;
+  /* height: 600px; */
   width: 100%;
   min-height: 400px;
   margin: 0;
@@ -838,20 +863,26 @@ body.font-ar .submit-button {
   justify-content: center;
   color: white;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 0px;
   overflow: hidden;
-  background: black; /* Fallback color in case image doesn't load */
 }
 
 /* Background image with overlay */
-.background-image {
-  position: absolute; /* Ensure it stays behind everything */
+.background-image-overlay {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures proportional scaling */
-  z-index: 1; /* Below overlay */
+  object-fit: cover; /* Ensures the image scales and fills proportionally */
+  z-index: 0; /* Ensure it's behind the text */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales and fills proportionally */
+  /* position: absolute; */
 }
 
 .overlay {
@@ -860,15 +891,15 @@ body.font-ar .submit-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Adjust darkness here */
-  z-index: 2; /* Above background but below content */
+  background: rgba(0, 0, 0, 0.8); /* Darkness overlay */
+  z-index: 3; /* Ensures overlay is above the image */
 }
 
 /* Content styles */
 .social-media-text,
 .social-media-icons {
-  position: relative; /* Stays above the overlay */
-  z-index: 3;
+  position: relative; /* Layer the content on top of the background */
+  z-index: 4;
 }
 
 .social-media-text h1.main-title {
@@ -885,7 +916,6 @@ body.font-ar .submit-button {
   margin-bottom: 4rem;
   text-align: center;
 }
-
 .description3 {
   font-size: 26px;
   font-weight: 100;
@@ -896,14 +926,12 @@ body.font-ar .submit-button {
   margin-bottom: 4rem;
   text-align: center;
 }
-
 .subtext {
   font-size: 16px;
   font-weight: 300;
   margin-top: 5rem;
-  z-index: 3; /* Above overlay */
+  z-index: 4;
 }
-
 .social-media-icons {
   display: flex;
   gap: 60px;
@@ -929,7 +957,6 @@ body.font-ar .submit-button {
     margin: 0;
     padding: 0;
   }
-
   .social-media-text h1.main-title {
     font-size: 2rem;
   }
@@ -939,40 +966,14 @@ body.font-ar .submit-button {
     max-width: 500px;
     margin: auto 30px;
   }
-
   .social-media-icons .icon-link {
     width: 40px;
     height: 40px;
   }
-
   .social-media-icons {
     gap: 2rem;
   }
-}  align-items: center; /* Centers vertically */
-  -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-.about-buttons {
-  /* padding: 20px 100px; */
-  align-items: center;
-  justify-content: center;
-  margin: 50px auto;
-  padding: 20px 50px;
-  border: 3px solid black; /* Thick black border */
-  background-color: white; /* Default background color */
-  color: black; /* Text color */
-  text-transform: uppercase;
-  font-size: 14px; /* Adjust font size */
-  font-weight: 800;
-  cursor: pointer; /* Change cursor on hover */
-  transition: background-color 0.5s; /* Smooth transition for hover effect */
-  z-index: 0;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-/*============================================================================================================================*/
-/* Container styles */
 
 /*============================================================================================================================*/
 /* General container styling */
