@@ -51,7 +51,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden; /* Disable horizontal overflow */
+  overflow-x: hidden;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
