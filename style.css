@@ -581,3 +581,105 @@ body.font-ar .submit-button {
   }
 }
 /*============================================================================================================================*/
+.icon-row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5vw;
+  margin: 5vw 100px;
+  padding: 0 2vw;
+  max-width: 90vw;
+  flex-wrap: wrap;
+  direction: ltr; /* Default to LTR */
+}
+
+/* Use [dir="rtl"] selector to handle RTL layouts */
+[dir="rtl"] .icon-row2 {
+  direction: rtl; /* Switch to RTL for Arabic or RTL languages */
+}
+
+.icon-item2 {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+  padding: 0 1em;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Adjust divider positioning for LTR and RTL */
+.icon-item2:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  height: 400px;
+  background-color: #ccc;
+  right: -2vw; /* Default for LTR */
+}
+
+/* Adjust divider for RTL */
+[dir="rtl"] .icon-item2:not(:last-child)::after {
+  right: auto; /* Remove right positioning */
+  left: -2vw; /* Set divider to the left for RTL */
+}
+
+/* Icon image styling */
+.icon-image2 {
+  width: 15vw;
+  max-width: 100px;
+  min-width: 20px;
+  height: auto;
+  margin-bottom: 0.5em;
+}
+
+.icon-title2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 0.5em;
+}
+
+.icon-description2 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #666;
+  margin-top: auto;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 960px) {
+  .icon-row2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .icon-item2 {
+    padding: 1em;
+  }
+
+  /* Horizontal divider for stacked items */
+  .icon-item2:not(:last-child)::after {
+    position: relative;
+    top: auto; /* Reset top position */
+    right: auto; /* Reset right position */
+    left: 0;
+    bottom: 0; /* Align to the bottom */
+    height: 2px; /* Thin horizontal divider */
+    width: 90%; /* Span across icon width */
+    margin: 1em auto; /* Center horizontally with margin */
+  }
+  .icon-image2 {
+    width: 20vw;
+    max-width: 70px;
+  }
+}
+
+/*============================================================================================================================*/
