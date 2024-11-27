@@ -1627,3 +1627,8 @@ h2 {
 .gallery-row-shit:nth-child(even) a:last-child {
   flex: 1; /* Small image takes 1 part */
 }
+@media (max-width: 960px) {
+  .gallery-row-shit a img {
+    height: 300px;
+  }
+}
