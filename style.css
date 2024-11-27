@@ -51,12 +51,12 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
+  background-color: white;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
   padding: 0;
-  background-color: white;
+  
 }
 #loading-screen {
   position: fixed;
@@ -1599,6 +1599,7 @@ h2 {
 .gallery-row-shit a {
   display: flex;
   max-width: 100%;
+  
 }
 
 .gallery-row-shit a img {
@@ -1625,3 +1626,5 @@ h2 {
 .gallery-row-shit:nth-child(even) a:last-child {
   flex: 1; /* Small image takes 1 part */
 }
+
+
