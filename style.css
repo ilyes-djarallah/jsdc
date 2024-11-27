@@ -892,14 +892,14 @@ body.font-ar .submit-button {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6); /* Darkness overlay */
-  z-index: 1; /* Ensures overlay is above the image */
+  z-index: 3; /* Ensures overlay is above the image */
 }
 
 /* Content styles */
 .social-media-text,
 .social-media-icons {
   position: relative; /* Layer the content on top of the background */
-  z-index: 2;
+  z-index: 4;
 }
 
 .social-media-text h1.main-title {
@@ -930,7 +930,7 @@ body.font-ar .submit-button {
   font-size: 16px;
   font-weight: 300;
   margin-top: 5rem;
-  z-index: 2;
+  z-index: 4;
 }
 .social-media-icons {
   display: flex;
