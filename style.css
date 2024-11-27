@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   font-family: "Montserrat", sans-serif;
-  background-color: white;
+  background-color: blueviolet;
   min-height: 100vh;
   max-width: 100%;
   margin: 0;
@@ -953,7 +953,7 @@ body.font-ar .submit-button {
 }
 
 /* Responsive design */
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   .social-media-container {
     margin: 0;
     padding: 0;
@@ -974,6 +974,5 @@ body.font-ar .submit-button {
   .social-media-icons {
     gap: 2rem;
   }
-}
+} */
 
-/*============================================================================================================================*/
