@@ -875,7 +875,7 @@ body.font-ar .submit-button {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image scales and fills proportionally */
-  
+  z-index:0;
 }
 
 .background-image {
@@ -899,7 +899,7 @@ body.font-ar .submit-button {
 .social-media-text,
 .social-media-icons {
   position: relative; /* Layer the content on top of the background */
-  z-index: 4;
+  
 }
 
 .social-media-text h1.main-title {
@@ -930,7 +930,7 @@ body.font-ar .submit-button {
   font-size: 16px;
   font-weight: 300;
   margin-top: 5rem;
-  z-index: 4;
+  
 }
 .social-media-icons {
   display: flex;
